@@ -370,4 +370,3 @@ Allows an existing user to sign in to the system using their email and password.
 
 ---
 
-Powered By: [postman-to-markdown](https://github.com/bautistaj/postman-to-markdown/)
