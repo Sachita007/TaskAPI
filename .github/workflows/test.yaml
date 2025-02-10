@@ -18,7 +18,10 @@ jobs:
         image: mongo
         ports:
           - 27017:27017
-
+    env:
+      MONGO_URI: ${{ secrets.MONGO_URI }}
+      JWT_SECRET: ${{ secrets.JWT_SECRET }}
+      JWT_EXP: ${{ secrets.JWT_EXP }}
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
