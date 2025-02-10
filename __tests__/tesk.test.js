@@ -132,15 +132,15 @@ describe("Task Management", () => {
                 description: "This task belongs to first user",
             });
 
-        console.log(createRes.body, secondUserToken)
+
 
         taskId = createRes.body.data._id;
-        console.log(taskId)
+
 
         const deleteRes = await request(app)
             .delete(`/api/tasks/${taskId}`)
             .set("Authorization", `Bearer ${secondUserToken}`);
-        console.log(deleteRes.body)
+
 
         expect(deleteRes.statusCode).toBe(404);
     });

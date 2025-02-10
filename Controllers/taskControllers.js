@@ -58,7 +58,7 @@ exports.updateTask = catchAsync(async (req, res, next) => {
 
 // Delete Task
 exports.deleteTask = catchAsync(async (req, res, next) => {
-  console.log(req.params.task);
+
   const task = await Task.findById(req.params.task);
 
   if (req.user._id.toString() !== task?.user.toString() || !task) {
